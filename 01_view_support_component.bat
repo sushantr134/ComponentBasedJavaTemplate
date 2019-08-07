@@ -1,0 +1,2 @@
+"%NOTEPAD%\notepad++.exe" -multiInst -nosession -ro _support/01_component/01_interface.txt _support/01_component/02_component_static_instance.txt _support/01_component/03_component_inner_methods.txt _support/01_component/04_component_port.txt _support/01_component/05_component_constructor.txt _support/01_component/06_build.xml
+pause

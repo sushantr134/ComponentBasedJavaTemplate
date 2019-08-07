@@ -1,0 +1,12 @@
+// inner methods
+public String innerGetVersion() {
+    return "prime number search";
+}
+
+public int innerCount(int minimum,int maximum) {
+    int numberOfPrimes = 0;
+    for (int n = minimum;n <= maximum;n++)
+        if (Utility.isPrime(n))
+            numberOfPrimes++;
+    return numberOfPrimes;
+}

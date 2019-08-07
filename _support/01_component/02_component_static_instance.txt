@@ -1,0 +1,7 @@
+// static instance
+private static PrimeNumberSearch instance = new PrimeNumberSearch();
+
+// static method getInstance
+public static PrimeNumberSearch getInstance() {
+    return instance;
+}

@@ -1,0 +1,13 @@
+// port
+public Port port;
+
+// inner class port
+public class Port implements IPrimeNumberSearch {
+    public String getVersion() {
+        return innerGetVersion();
+    }
+
+    public int count(int minimum,int maximum) {
+        return innerCount(minimum,maximum);
+    }
+}

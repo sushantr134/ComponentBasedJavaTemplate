@@ -1,0 +1,4 @@
+// private constructor
+private PrimeNumberSearch() {
+    port = new Port();
+}
