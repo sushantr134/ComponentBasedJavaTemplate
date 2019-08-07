@@ -1,1 +1,4 @@
 build
+.idea/*
+component/build.xml
+component/.idea/*
