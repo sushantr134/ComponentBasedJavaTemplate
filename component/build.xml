@@ -14,7 +14,7 @@
         <mkdir dir="jar"/>
         <jar destfile="jar/apu_oiltank.jar" basedir="build">
             <manifest>
-                <attribute name="Main-Class" value="apu_oiltank"/>
+                <attribute name="Main-Class" value="APUOilTank"/>
             </manifest>
         </jar>
     </target>
