@@ -1,0 +1,4 @@
+// [student id[ | [student name]
+// student name in lower case
+// Example: 999990 | tania sachdev
+

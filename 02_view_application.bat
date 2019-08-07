@@ -1,0 +1,1 @@
+"%NOTEPAD%\notepad++.exe" -multiInst -nosession -ro src/Configuration.java src/DataManagement.java src/SortFactory.java src/Application.java
