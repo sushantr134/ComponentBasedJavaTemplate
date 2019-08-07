@@ -5,6 +5,8 @@ public class APUOilTank {
     private String type="team<28>";
     private String id = "<161B294>";
     private int level=0;
+
+    //instance declaration
     public APUOilTank(){
         port = new Port();
     }
@@ -12,6 +14,8 @@ public class APUOilTank {
     {
         return instance;
     }
+
+    //inner methods defined
     public String innerVersion(){
         return "APUOilTank//"+ manufacturer+ "-"+type+ "-"+id;
     }
