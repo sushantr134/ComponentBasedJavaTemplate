@@ -27,20 +27,16 @@ public class Airplane {
     }
 
     public void startup() {
-        // weather_radar
-//        body.weatherRadarOn();
-//        body.weatherRadarScan("sky");
+        //battery
+        body.setBatteryCharge();
 
-        //tourist_class_seat
-        body.setTouristClassSeatAssign();
-        body.touristClassSeatSeatBeltOn();
-
+        //apu_oil_tank
+        body.setApuOilTankIncreaseLevel(100);
     }
 
     public void taxi() {
         // weather_radar
-//        body.weatherRadarOn();
-//        body.weatherRadarScan("sky");
+
     }
 
     public void takeoff() {
@@ -86,8 +82,10 @@ public class Airplane {
     }
 
     public void shutdown() {
-        // weather_radar
-//        body.weatherRadarOff();
-//        body.weatherRadarScan("sky");
+        //battery
+        body.setBatteryDischarge();
+
+        //apu_oil_tank
+        body.setApuOilTankDecreaseLevel(0);
     }
 }

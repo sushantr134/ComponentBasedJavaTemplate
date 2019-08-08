@@ -6,7 +6,8 @@ import logging.LogEngine;
 import org.junit.jupiter.api.*;
 import recorder.FlightRecorder;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TestProcedure {
@@ -25,9 +26,13 @@ public class TestProcedure {
     @Test
     @Order(1)
     public void getComponentPort() {
-        System.out.println("--- TouristClassSeat ---");
-        System.out.println("[#ports] \t\t\t\t\t\t: " + airplane.getBody().getTouristClassSeatPortList().size());
-        assertEquals(2,airplane.getBody().getTouristClassSeatPortList().size());
+        System.out.println("--- Battery ---");
+        System.out.println("[#ports] \t\t\t\t\t\t: " + airplane.getBody().getBatteryPortList().size());
+        assertEquals(24,airplane.getBody().getBatteryPortList().size());
+
+        System.out.println("--- ApuOilTank ---");
+        System.out.println("[#ports] \t\t\t\t\t\t: " + airplane.getBody().getApuOilTankPortList().size());
+        assertEquals(2,airplane.getBody().getApuOilTankPortList().size());
     }
 
     @Test
@@ -35,14 +40,13 @@ public class TestProcedure {
     public void startup() {
         airplane.startup();
 
-        //tourist_class_seat
+        //battery
+        System.out.println("[startup \t| batteryCharge] : " + PrimaryFlightDisplay.instance.percentage);
+        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
 
-        System.out.println("[startup \t| touristClassSeatAssign] : " + PrimaryFlightDisplay.instance.passenger);
-        assertNotNull(PrimaryFlightDisplay.instance.passenger);
-
-        System.out.println("[startup \t| isSeatBeltSignOn] : " + PrimaryFlightDisplay.instance.isSeatBeltSignOn);
-        assertTrue(PrimaryFlightDisplay.instance.isSeatBeltSignOn);
-
+        //apu_oil_tank
+        System.out.println("[startup \t| apuOilTankIncreaseLevel] : " + PrimaryFlightDisplay.instance.level);
+        assertNotEquals(0,PrimaryFlightDisplay.instance.level);
 
 
     }
