@@ -3,7 +3,6 @@ package section;
 import base.Passenger;
 import base.PrimaryFlightDisplay;
 import configuration.Configuration;
-import factory.TouristClassSeatFactory;
 import factory.WeatherRadarFactory;
 import logging.LogEngine;
 import recorder.FlightRecorder;

@@ -14,12 +14,10 @@ public enum Configuration {
     public String dataDirectory = userDirectory + fileSeparator + "data" + fileSeparator;
     public String databaseFile = dataDirectory + "flight_recorder_airbus_a380.db";
 
-    // weather_radar
-    public String pathToWeatherRadarJavaArchive = commonPathToJavaArchive + "weather_radar" + fileSeparator + "jar" + fileSeparator + "weather_radar.jar";
-    public int numberOfWeatherRadar = 2;
 
-    //tourist_class_seat
-     public String pathToTouristClassSeatJavaArchive = commonPathToJavaArchive + "tourist-class-seat" + fileSeparator + "jar" + fileSeparator + "tourist-class-seat.jar";
-     public int numberOfTouristClassSeat = 480;
+    //battery
+     public String pathToBatteryJavaArchive = commonPathToJavaArchive + "battery" + fileSeparator + "jar" + fileSeparator + "battery.jar";
+     public int numberOfBattery = 24;
+
 
 }
