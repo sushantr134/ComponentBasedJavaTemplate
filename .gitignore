@@ -1,5 +1,6 @@
 build
-.idea/*
+src/.idea/*
 component/build.xml
 component/.idea/*
 documentation
+.idea/*

@@ -1,5 +1,0 @@
-// [team id] | [student id[ | [student name]
-// student name in lower case
-// Example: 27 | 161B105 | tania sachdev
-//          01 | 999991 | viswanathan anand
-QA2 | 161B301 | sushant singh

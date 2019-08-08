@@ -1,1 +1,0 @@
-"%NOTEPAD%\notepad++.exe" -multiInst -nosession -ro component/src/ISort.java component/src/Sort.java component/build.xml

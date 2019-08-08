@@ -1,0 +1,192 @@
+2019-08-09 03:08:33 : Database Connection (isClosed): false
+2019-08-09 03:08:33 : sqlStringBuilder = DROP TABLE data
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797020894400,'BatteryFactory','battery: 983595261')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797024955300,'batteryFactory','batteryInstance: 347978868')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797026859000,'batteryFactory','batteryPort: 940857381')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797030693800,'BatteryFactory','battery: 508512860')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797031332400,'batteryFactory','batteryInstance: 106999035')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797031801100,'batteryFactory','batteryPort: 1569754439')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797033966800,'BatteryFactory','battery: 1777238524')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797034589000,'batteryFactory','batteryInstance: 993370665')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797035063300,'batteryFactory','batteryPort: 159475521')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797037904400,'BatteryFactory','battery: 800088638')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797038495100,'batteryFactory','batteryInstance: 2100440237')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797038985300,'batteryFactory','batteryPort: 566113173')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797041335000,'BatteryFactory','battery: 1889057031')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797041907600,'batteryFactory','batteryInstance: 914374969')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797042470800,'batteryFactory','batteryPort: 549293029')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797044859800,'BatteryFactory','battery: 442125849')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797045550500,'batteryFactory','batteryInstance: 37981645')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797046221500,'batteryFactory','batteryPort: 605052357')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797048580100,'BatteryFactory','battery: 1358343316')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797049283400,'batteryFactory','batteryInstance: 718571091')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797049792800,'batteryFactory','batteryPort: 1807015220')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797051955300,'BatteryFactory','battery: 1242027525')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797052559300,'batteryFactory','batteryInstance: 1753714541')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797053122300,'batteryFactory','batteryPort: 1095273238')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797055406900,'BatteryFactory','battery: 375466577')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797055981300,'batteryFactory','batteryInstance: 1267105885')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797056488300,'batteryFactory','batteryPort: 1481818223')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797058859300,'BatteryFactory','battery: 400103862')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797059496200,'batteryFactory','batteryInstance: 1046665075')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797059918700,'batteryFactory','batteryPort: 1324829744')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797062201900,'BatteryFactory','battery: 2003463579')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797063024800,'batteryFactory','batteryInstance: 1281025083')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797063478800,'batteryFactory','batteryPort: 40170008')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797065880800,'BatteryFactory','battery: 292138977')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797066867100,'batteryFactory','batteryInstance: 1926673338')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797067808700,'batteryFactory','batteryPort: 394785440')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797071610300,'BatteryFactory','battery: 333040629')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797072692300,'batteryFactory','batteryInstance: 610454273')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797073617000,'batteryFactory','batteryPort: 431506362')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797077426800,'BatteryFactory','battery: 1796047085')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797078130900,'batteryFactory','batteryInstance: 231311211')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797078638600,'batteryFactory','batteryPort: 795242171')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797081028000,'BatteryFactory','battery: 768192757')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797081623700,'batteryFactory','batteryInstance: 1962329560')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797082166500,'batteryFactory','batteryPort: 41489123')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797084538700,'BatteryFactory','battery: 605420629')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797085124800,'batteryFactory','batteryInstance: 412111214')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797085603100,'batteryFactory','batteryPort: 362827515')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797087838300,'BatteryFactory','battery: 542980314')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797088490600,'batteryFactory','batteryInstance: 2079565272')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797089020200,'batteryFactory','batteryPort: 1122130699')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797091160900,'BatteryFactory','battery: 1370074462')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797091767000,'batteryFactory','batteryInstance: 1443055846')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797092242500,'batteryFactory','batteryPort: 502838712')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797095421900,'BatteryFactory','battery: 1081769770')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797096254400,'batteryFactory','batteryInstance: 1594873248')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797096750400,'batteryFactory','batteryPort: 1692885405')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797099418100,'BatteryFactory','battery: 892335322')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797100049200,'batteryFactory','batteryInstance: 1601687801')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797100524800,'batteryFactory','batteryPort: 1178587240')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797108554100,'BatteryFactory','battery: 196732636')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797109212000,'batteryFactory','batteryInstance: 1731656333')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797109731700,'batteryFactory','batteryPort: 1384210339')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797111980600,'BatteryFactory','battery: 238816832')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797112769500,'batteryFactory','batteryInstance: 1508038883')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797113376800,'batteryFactory','batteryPort: 728943498')
+2019-08-09 03:08:33 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797116101100,'BatteryFactory','battery: 473524237')
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797116941800,'batteryFactory','batteryInstance: 616881582')
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797123182900,'batteryFactory','batteryPort: 939199469')
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797125696200,'BatteryFactory','battery: 682910755')
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797126438300,'batteryFactory','batteryInstance: 409195262')
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797126880100,'batteryFactory','batteryPort: 394771492')
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797130263900,'ApuOilTankFactory','ApuOilTank: 1800976873')
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797131098000,'ApuOilTankFactory','apuOilTankInstance: 1151704483')
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797131779800,'ApuOilTankFactory','apuOilTankPort: 1800976873')
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797134056900,'ApuOilTankFactory','ApuOilTank: 1037854997')
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797134633200,'ApuOilTankFactory','apuOilTankInstance: 464224872')
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797135144000,'ApuOilTankFactory','apuOilTankPort: 1037854997')
+2019-08-09 03:08:34 : + Body.receive(batteryCharge)
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797158111600,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797159006800,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797161314800,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797162086200,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797162862400,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797163557000,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797164094200,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797164648500,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797165092000,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797165597700,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797166131300,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797166607000,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797167041000,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797167431500,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797167880600,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797168298900,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797168742300,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797169157900,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797169619000,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797170037100,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797170653200,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797171172600,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797171621600,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797172068500,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797172498300,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797172921700,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797173313600,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797174238800,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797174669500,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797175194400,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797175734700,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797176183800,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797176601500,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797177008200,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797177482300,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797178001400,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797178589100,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797179144200,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797179748800,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797180286300,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797180795800,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797181287300,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797181712200,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797182098100,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797182475300,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797182825800,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797183204600,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797183563200,'Body','receive(batteryCharge)')
+2019-08-09 03:08:34 : batteryCharge = 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797183974700,'Body','BatteryCharge: 1')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : PrimaryFlightDisplay (batteryCharge): 1
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797184819300,'PrimaryFlightDisplay','batteryCharge:  1')
+2019-08-09 03:08:34 : + Body.receive(apuOilTankIncreaseLevel)
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797185293900,'Body','receive(apuOilTankIncreaseLevel)')
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797185585600,'Body','receive(apuOilTankIncreaseLevel)')
+2019-08-09 03:08:34 : apuOilTankIncreaseLevel = 100
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797186430800,'Body','apuOilTankIncreaseLevel: 100')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797186853000,'Body','receive(apuOilTankIncreaseLevel)')
+2019-08-09 03:08:34 : apuOilTankIncreaseLevel = 100
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797187311200,'Body','apuOilTankIncreaseLevel: 100')
+2019-08-09 03:08:34 : +
+2019-08-09 03:08:34 : PrimaryFlightDisplay (apuOilTankIncreaseLevel): 100
+2019-08-09 03:08:34 : sqlStringBuilder = INSERT INTO data (id,className,message) VALUES (1323797188187400,'PrimaryFlightDisplay','apuOilTankIncreaseLevel:  100')
