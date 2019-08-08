@@ -113,7 +113,7 @@ public class Body {
         try {
             for(int i=0; i<Configuration.instance.numberOfApuOilTank;i++)
             {
-                Method onMethod = apuOilTankPortList.get(i).getClass().getDeclaredMethod("increase",Integer.class);
+                Method onMethod = apuOilTankPortList.get(i).getClass().getDeclaredMethod("increase",int.class);
                 FlightRecorder.instance.insert("Body","receive(apuOilTankIncreaseLevel)");
 
                 int level = (int)onMethod.invoke(apuOilTankPortList.get(i),value);
@@ -144,7 +144,7 @@ public class Body {
         try {
             for(int i=0; i<Configuration.instance.numberOfApuOilTank;i++)
             {
-                Method onMethod = apuOilTankPortList.get(i).getClass().getDeclaredMethod("decrease",Integer.class);
+                Method onMethod = apuOilTankPortList.get(i).getClass().getDeclaredMethod("decrease",int.class);
                 FlightRecorder.instance.insert("Body","receive(apuOilTankDecreaseLevel)");
 
                 int level = (int)onMethod.invoke(apuOilTankPortList.get(i),value);
