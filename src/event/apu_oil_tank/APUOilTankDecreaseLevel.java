@@ -6,6 +6,6 @@ public class APUOilTankDecreaseLevel {
         this.level = level;
     }
     public String toString() {
-        return "Event-APUOilTank - DecreaseLevel";
+        return "Event: APUOilTank - DecreaseLevel";
     }
 }
