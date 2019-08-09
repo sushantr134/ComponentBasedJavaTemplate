@@ -1,0 +1,1 @@
+"%NOTEPAD%\notepad++.exe" -multiInst -nosession -ro components/weather_radar/src/IWeatherRadar.java components/weather_radar/src/WeatherRadar.java

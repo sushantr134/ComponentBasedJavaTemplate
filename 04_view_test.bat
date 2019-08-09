@@ -1,0 +1,1 @@
+"%NOTEPAD%\notepad++.exe" -multiInst -nosession -ro src/test/TestWeatherRadar.java src/test/ProcedureTest.java
