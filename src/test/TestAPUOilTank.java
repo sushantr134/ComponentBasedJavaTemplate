@@ -13,7 +13,7 @@ import java.lang.reflect.Method;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class APUOilTank {
+class TestAPUOilTank {
     private Object componentPort;
 
     @BeforeEach
@@ -33,10 +33,10 @@ class APUOilTank {
     public void methods() {
         componentPort = ApuOilTankFactory.build();
         try {
-            Method onMethod = componentPort.getClass().getDeclaredMethod("Increase",int.class);
-            assertNotEquals(0,onMethod);
+            Method onMethod = componentPort.getClass().getDeclaredMethod("increase",int.class);
+            assertNotNull(onMethod);
 
-            Method offMethod = componentPort.getClass().getDeclaredMethod("Decrease",int.class);
+            Method offMethod = componentPort.getClass().getDeclaredMethod("decrease",int.class);
             assertNotNull(offMethod);
 
         } catch (Exception e) {
@@ -48,9 +48,9 @@ class APUOilTank {
     public void Increase() {
         componentPort = ApuOilTankFactory.build();
         try {
-            Method onMethod = componentPort.getClass().getDeclaredMethod("Increase",int.class);
-            int level = (int) onMethod.invoke(componentPort);
-            assertNotEquals(0,level);
+            Method onMethod = componentPort.getClass().getDeclaredMethod("increase",int.class);
+            int level = (int) onMethod.invoke(componentPort,100);
+            assertEquals(100,level);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -60,9 +60,9 @@ class APUOilTank {
     public void Decrease() {
         componentPort = ApuOilTankFactory.build();
         try {
-            Method onMethod = componentPort.getClass().getDeclaredMethod("Decrease",int.class);
-            int level = (int) onMethod.invoke(componentPort);
-            assertEquals(0,level);
+            Method onMethod = componentPort.getClass().getDeclaredMethod("decrease",int.class);
+            int level = (int) onMethod.invoke(componentPort,10);
+            assertNotEquals(100,level);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -72,8 +72,8 @@ class APUOilTank {
     public void startup() {
         componentPort = ApuOilTankFactory.build();
         try {
-            Method onMethod = componentPort.getClass().getDeclaredMethod("Increase",int.class);
-            int level = (int) onMethod.invoke(componentPort);
+            Method onMethod = componentPort.getClass().getDeclaredMethod("increase",int.class);
+            int level = (int) onMethod.invoke(componentPort,100);
             PrimaryFlightDisplay.instance.level = level;
             assertNotEquals(0,PrimaryFlightDisplay.instance.level);
         } catch (Exception e) {
@@ -85,8 +85,8 @@ class APUOilTank {
     public void taxi() {
         componentPort = ApuOilTankFactory.build();
         try {
-            Method onMethod = componentPort.getClass().getDeclaredMethod("Increase",int.class);
-            int level = (int) onMethod.invoke(componentPort);
+            Method onMethod = componentPort.getClass().getDeclaredMethod("decrease",int.class);
+            int level = (int) onMethod.invoke(componentPort,1);
             PrimaryFlightDisplay.instance.level = level;
             assertNotEquals(0,PrimaryFlightDisplay.instance.level);
         } catch (Exception e) {
@@ -98,8 +98,8 @@ class APUOilTank {
     public void takeoff() {
         componentPort = ApuOilTankFactory.build();
         try {
-            Method onMethod = componentPort.getClass().getDeclaredMethod("Increase");
-            int level = (int) onMethod.invoke(componentPort);
+            Method onMethod = componentPort.getClass().getDeclaredMethod("decrease",int.class);
+            int level = (int) onMethod.invoke(componentPort,1);
             PrimaryFlightDisplay.instance.level = level;
             assertNotEquals(0,PrimaryFlightDisplay.instance.level);
         } catch (Exception e) {
@@ -111,8 +111,8 @@ class APUOilTank {
     public void climbing() {
         componentPort = ApuOilTankFactory.build();
         try {
-            Method onMethod = componentPort.getClass().getDeclaredMethod("Increase");
-            int level = (int) onMethod.invoke(componentPort);
+            Method onMethod = componentPort.getClass().getDeclaredMethod("decrease",int.class);
+            int level = (int) onMethod.invoke(componentPort,10);
             PrimaryFlightDisplay.instance.level = level;
             assertNotEquals(0,PrimaryFlightDisplay.instance.level);
         } catch (Exception e) {
@@ -124,8 +124,8 @@ class APUOilTank {
     public void rightTurn() {
         componentPort = ApuOilTankFactory.build();
         try {
-            Method onMethod = componentPort.getClass().getDeclaredMethod("Increase");
-            int level = (int) onMethod.invoke(componentPort);
+            Method onMethod = componentPort.getClass().getDeclaredMethod("decrease",int.class);
+            int level = (int) onMethod.invoke(componentPort,10);
             PrimaryFlightDisplay.instance.level = level;
             assertNotEquals(0,PrimaryFlightDisplay.instance.level);
         } catch (Exception e) {
@@ -137,8 +137,8 @@ class APUOilTank {
     public void leftTurn() {
         componentPort = BatteryFactory.build();
         try {
-            Method onMethod = componentPort.getClass().getDeclaredMethod("Increase");
-            int level = (int) onMethod.invoke(componentPort);
+            Method onMethod = componentPort.getClass().getDeclaredMethod("decrease",int.class);
+            int level = (int) onMethod.invoke(componentPort,10);
             PrimaryFlightDisplay.instance.level = level;
             assertNotEquals(0,PrimaryFlightDisplay.instance.level);
         } catch (Exception e) {
@@ -150,8 +150,8 @@ class APUOilTank {
     public void descent() {
         componentPort = ApuOilTankFactory.build();
         try {
-            Method onMethod = componentPort.getClass().getDeclaredMethod("Decrease");
-            int level = (int) onMethod.invoke(componentPort);
+            Method onMethod = componentPort.getClass().getDeclaredMethod("decrease",int.class);
+            int level = (int) onMethod.invoke(componentPort,10);
             PrimaryFlightDisplay.instance.level = level;
             assertNotEquals(0,PrimaryFlightDisplay.instance.level);
         } catch (Exception e) {
@@ -163,8 +163,8 @@ class APUOilTank {
     public void landing() {
         componentPort = ApuOilTankFactory.build();
         try {
-            Method onMethod = componentPort.getClass().getDeclaredMethod("Decrease");
-            int level = (int) onMethod.invoke(componentPort);
+            Method onMethod = componentPort.getClass().getDeclaredMethod("decrease",int.class);
+            int level = (int) onMethod.invoke(componentPort,20);
             PrimaryFlightDisplay.instance.level = level;
             assertNotEquals(0,PrimaryFlightDisplay.instance.level);
         } catch (Exception e) {
@@ -177,10 +177,10 @@ class APUOilTank {
     public void shutdown() {
         componentPort = ApuOilTankFactory.build();
         try {
-            Method onMethod = componentPort.getClass().getDeclaredMethod("Decrease");
-            int level = (int) onMethod.invoke(componentPort);
+            Method onMethod = componentPort.getClass().getDeclaredMethod("decrease",int.class);
+            int level = (int) onMethod.invoke(componentPort,50);
             PrimaryFlightDisplay.instance.level = level;
-            assertNotEquals(1,PrimaryFlightDisplay.instance.level);
+            assertNotEquals(100,PrimaryFlightDisplay.instance.level);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
