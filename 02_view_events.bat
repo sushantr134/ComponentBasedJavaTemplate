@@ -1,1 +1,1 @@
-"%NOTEPAD%\notepad++.exe" -multiInst -nosession -ro behaviour.txt src/event/Subscriber.java src/event/weather_radar/WeatherRadarOff.java src/event/weather_radar/WeatherRadarOn.java src/event/weather_radar/WeatherRadarScan.java
+"%NOTEPAD%\notepad++.exe" -multiInst -nosession -ro behaviour.txt src/event/Subscriber.java

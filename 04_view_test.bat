@@ -1,1 +1,1 @@
-"%NOTEPAD%\notepad++.exe" -multiInst -nosession -ro src/test/TestWeatherRadar.java src/test/ProcedureTest.java
+"%NOTEPAD%\notepad++.exe" -multiInst -nosession -ro src/test/Test[Name].java src/test/ProcedureTest.java
