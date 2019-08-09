@@ -7,8 +7,7 @@ import logging.LogEngine;
 import org.junit.jupiter.api.*;
 import recorder.FlightRecorder;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ProcedureTest {
@@ -32,8 +31,10 @@ public class ProcedureTest {
     public void startUpTest() {
         cockpit.startup();
 
-        // weather_radar
-        assertTrue(PrimaryFlightDisplay.instance.isWeatherRadarOn);
+        // battery
+        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
+        //apu_oil_tank
+        assertNotEquals(0,PrimaryFlightDisplay.instance.level);
     }
 
     @Test
@@ -41,70 +42,79 @@ public class ProcedureTest {
     public void taxiTest() {
         cockpit.taxi();
 
-        // weather_radar
-        assertTrue(PrimaryFlightDisplay.instance.isWeatherRadarOn);
+        // battery
+        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
+        //apu_oil_tank
+        assertNotEquals(0,PrimaryFlightDisplay.instance.level);;
     }
 
     @Test
     @Order(3)
     public void takeOffTest() {
         cockpit.takeoff();
-
-        // weather_radar
-        assertTrue(PrimaryFlightDisplay.instance.isWeatherRadarOn);
+        // battery
+        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
+        //apu_oil_tank
+        assertNotEquals(0,PrimaryFlightDisplay.instance.level);
     }
 
     @Test
     @Order(4)
     public void climbingTest() {
         cockpit.climbing();
-
-        // weather_radar
-        assertTrue(PrimaryFlightDisplay.instance.isWeatherRadarOn);
+        // battery
+        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
+        //apu_oil_tank
+        assertNotEquals(0,PrimaryFlightDisplay.instance.level);
     }
 
     @Test
     @Order(5)
     public void rightTurnTest() {
         cockpit.rightTurn();
-
-        // weather_radar
-        assertTrue(PrimaryFlightDisplay.instance.isWeatherRadarOn);
+        // battery
+        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
+        //apu_oil_tank
+        assertNotEquals(0,PrimaryFlightDisplay.instance.level);
     }
 
     @Test
     @Order(6)
     public void leftTurnTest() {
         cockpit.leftTurn();
-
-        // weather_radar
-        assertTrue(PrimaryFlightDisplay.instance.isWeatherRadarOn);
+        // battery
+        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
+        //apu_oil_tank
+        assertNotEquals(0,PrimaryFlightDisplay.instance.level);
     }
 
     @Test
     @Order(7)
     public void descentTest() {
         cockpit.descent();
-
-        // weather_radar
-        assertTrue(PrimaryFlightDisplay.instance.isWeatherRadarOn);
+        // battery
+        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
+        //apu_oil_tank
+        assertNotEquals(0,PrimaryFlightDisplay.instance.level);
     }
 
     @Test
     @Order(8)
     public void landingTest() {
         cockpit.landing();
-
-        // weather_radar
-        assertTrue(PrimaryFlightDisplay.instance.isWeatherRadarOn);
+        // battery
+        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
+        //apu_oil_tank
+        assertNotEquals(0,PrimaryFlightDisplay.instance.level);
     }
 
     @Test
     @Order(9)
     public void shutdownTest() {
         cockpit.shutdown();
-
-        // weather_radar
-        assertFalse(PrimaryFlightDisplay.instance.isWeatherRadarOn);
+        // battery
+        assertNotEquals(1,PrimaryFlightDisplay.instance.percentage);
+        //apu_oil_tank
+        assertNotEquals(100,PrimaryFlightDisplay.instance.level);
     }
 }

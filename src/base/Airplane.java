@@ -2,8 +2,10 @@ package base;
 
 import com.google.common.eventbus.EventBus;
 import event.Subscriber;
-import event.weather_radar.WeatherRadarOff;
-import event.weather_radar.WeatherRadarOn;
+import event.battery.BatteryCharge;
+import event.battery.BatteryDischarge;
+import event.apu_oil_tank.APUOilTankDecreaseLevel;
+import event.apu_oil_tank.APUOilTankIncreaseLevel;
 import section.Body;
 import section.Wing;
 
@@ -33,47 +35,65 @@ public class Airplane implements IAirplane {
     }
 
     public void startup() {
-        // weather_radar
-        eventBus.post(new WeatherRadarOn());
+        // battery
+        eventBus.post(new BatteryCharge());
+        //apu_oil_tank
+        eventBus.post(new APUOilTankIncreaseLevel(100));
     }
 
     public void taxi() {
-        // weather_radar
-        eventBus.post(new WeatherRadarOn());
+        // battery
+        eventBus.post(new BatteryCharge());
+        //apu_oil_tank
+        eventBus.post(new APUOilTankIncreaseLevel(100));
     }
 
     public void takeoff() {
-        // weather_radar
-        eventBus.post(new WeatherRadarOn());
+        // battery
+        eventBus.post(new BatteryCharge());
+        //apu_oil_tank
+        eventBus.post(new APUOilTankDecreaseLevel(1));
     }
 
     public void climbing() {
-        // weather_radar
-        eventBus.post(new WeatherRadarOn());
+        // battery
+        eventBus.post(new BatteryCharge());
+        //apu_oil_tank
+        eventBus.post(new APUOilTankDecreaseLevel(10));
     }
 
     public void rightTurn() {
-        // weather_radar
-        eventBus.post(new WeatherRadarOn());
+        // battery
+        eventBus.post(new BatteryCharge());
+        //apu_oil_tank
+        eventBus.post(new APUOilTankDecreaseLevel(10));;
     }
 
     public void leftTurn() {
-        // weather_radar
-        eventBus.post(new WeatherRadarOn());
+        // battery
+        eventBus.post(new BatteryCharge());
+        //apu_oil_tank
+        eventBus.post(new APUOilTankDecreaseLevel(20));
     }
 
     public void descent() {
-        // weather_radar
-        eventBus.post(new WeatherRadarOn());
+        // battery
+        eventBus.post(new BatteryCharge());
+        //apu_oil_tank
+        eventBus.post(new APUOilTankDecreaseLevel(10));
     }
 
     public void landing() {
-        // weather_radar
-        eventBus.post(new WeatherRadarOn());
+        // battery
+        eventBus.post(new BatteryCharge());
+        //apu_oil_tank
+        eventBus.post(new APUOilTankDecreaseLevel(10));
     }
 
     public void shutdown() {
-        // weather_radar
-        eventBus.post(new WeatherRadarOff());
+        // battery
+        eventBus.post(new BatteryDischarge());
+        //apu_oil_tank
+        eventBus.post(new APUOilTankDecreaseLevel(10));
     }
 }
