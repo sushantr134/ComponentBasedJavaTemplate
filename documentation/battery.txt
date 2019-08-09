@@ -1,3 +1,0 @@
-interface              : IBattery
-class name             : Battery
-java archive file name : battery.jar

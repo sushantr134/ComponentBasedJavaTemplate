@@ -1,6 +1,6 @@
 build
+.idea
 src/.idea/*
-component/build.xml
-component/.idea/*
+log
 documentation
-.idea/*
+src/.idea/*

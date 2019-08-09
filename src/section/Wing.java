@@ -1,4 +1,6 @@
 package section;
 
-public class Wing {
+import event.Subscriber;
+
+public class Wing extends Subscriber {
 }

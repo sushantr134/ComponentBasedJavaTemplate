@@ -1,1 +1,0 @@
-"%NOTEPAD%\notepad++.exe" -multiInst -nosession -ro src/factory/WeatherRadarFactory.java src/configuration/Configuration.java src/base/PrimaryFlightDisplay.java  src/section/Body.java src/section/Wing.java src/base/Airplane.java src/test/TestProcedure.java

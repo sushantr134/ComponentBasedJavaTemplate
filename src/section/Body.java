@@ -1,169 +1,90 @@
 package section;
 
 import base.PrimaryFlightDisplay;
+import com.google.common.eventbus.Subscribe;
 import configuration.Configuration;
-import factory.ApuOilTankFactory;
-import factory.BatteryFactory;
+import event.Subscriber;
+import event.weather_radar.WeatherRadarOff;
+import event.weather_radar.WeatherRadarOn;
+import event.weather_radar.WeatherRadarScan;
+import factory.WeatherRadarFactory;
 import logging.LogEngine;
 import recorder.FlightRecorder;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
-public class Body {
-    private ArrayList<Object> batteryPortList;
-    private ArrayList<Object> apuOilTankPortList;
+public class Body extends Subscriber {
+    private ArrayList<Object> weatherRadarPorts;
 
     public Body() {
-        batteryPortList = new ArrayList<>();
-        apuOilTankPortList = new ArrayList<>();
+        weatherRadarPorts = new ArrayList<>();
         build();
     }
 
     public void build() {
-
-        for(int i = 0; i < Configuration.instance.numberOfBattery;i++)
-        {
-            batteryPortList.add(BatteryFactory.build());
-        }
-        for(int j = 0; j < Configuration.instance.numberOfApuOilTank;j++)
-        {
-            apuOilTankPortList.add(ApuOilTankFactory.build());
-        }
+        for (int i = 0; i < Configuration.instance.numberOfWeatherRadar; i++)
+            weatherRadarPorts.add(WeatherRadarFactory.build());
     }
 
-    public ArrayList<Object> getApuOilTankPortList()
-    {
-        return apuOilTankPortList;
-    }
-    public  ArrayList<Object> getBatteryPortList()
-    {
-        return batteryPortList;
-    }
+    // --- WeatherRadar -----------------------------------------------------------------------------------------------
 
-    //battery_methods
-    public void setBatteryCharge()
-    {
-
-        LogEngine.instance.write("+ Body.receive(batteryCharge)");
-        FlightRecorder.instance.insert("Body","receive(batteryCharge)");
+    @Subscribe
+    public void receive(WeatherRadarOn weatherRadarOn) {
+        LogEngine.instance.write("+ Body.receive(" + weatherRadarOn.toString() + ")");
+        FlightRecorder.instance.insert("Body", "receive(" + weatherRadarOn.toString() + ")");
 
         try {
-            for(int i=0; i<Configuration.instance.numberOfBattery;i++)
-            {
-                Method onMethod = batteryPortList.get(i).getClass().getDeclaredMethod("charge");
-                FlightRecorder.instance.insert("Body","receive(batteryCharge)");
+            for (int i = 0; i < Configuration.instance.numberOfWeatherRadar; i++) {
+                Method onMethod = weatherRadarPorts.get(i).getClass().getDeclaredMethod("on");
+                LogEngine.instance.write("onMethod = " + onMethod);
 
-                int percentage = (int)onMethod.invoke(batteryPortList.get(i));
-                LogEngine.instance.write("batteryCharge = " + percentage);
+                boolean isOn = (boolean) onMethod.invoke(weatherRadarPorts.get(i));
+                LogEngine.instance.write("isOn = " + isOn);
 
-                PrimaryFlightDisplay.instance.percentage = percentage;
-                FlightRecorder.instance.insert("Body", "BatteryCharge: " + percentage);
+                PrimaryFlightDisplay.instance.isWeatherRadarOn = isOn;
+                FlightRecorder.instance.insert("Body", "WeatherRadar (isOn): " + isOn);
 
                 LogEngine.instance.write("+");
-
             }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
-        LogEngine.instance.write("PrimaryFlightDisplay (batteryCharge): " + PrimaryFlightDisplay.instance.percentage);
-        FlightRecorder.instance.insert("PrimaryFlightDisplay", "batteryCharge:  " + PrimaryFlightDisplay.instance.percentage);
+        LogEngine.instance.write("PrimaryFlightDisplay (isWeatherRadarOn): " + PrimaryFlightDisplay.instance.isWeatherRadarOn);
+        FlightRecorder.instance.insert("PrimaryFlightDisplay", "isWeatherRadarOn: " + PrimaryFlightDisplay.instance.isWeatherRadarOn);
     }
-    public void setBatteryDischarge()
-    {
 
-        LogEngine.instance.write("+ Body.receive(batteryDischarge)");
-        FlightRecorder.instance.insert("Body","receive(batteryDischarge)");
+    @Subscribe
+    public void receive(WeatherRadarOff weatherRadarOff) {
+        LogEngine.instance.write("+ Body.receive(" + weatherRadarOff.toString() + ")");
+        FlightRecorder.instance.insert("Body", "receive(" + weatherRadarOff.toString() + ")");
 
         try {
-            for(int i=0; i<Configuration.instance.numberOfBattery;i++)
-            {
-                Method onMethod = batteryPortList.get(i).getClass().getDeclaredMethod("discharge");
-                FlightRecorder.instance.insert("Body","receive(batteryDischarge)");
+            for (int i = 0; i < Configuration.instance.numberOfWeatherRadar; i++) {
+                Method offMethod = weatherRadarPorts.get(i).getClass().getDeclaredMethod("off");
+                LogEngine.instance.write("offMethod = " + offMethod);
 
-                int percentage = (int)onMethod.invoke(batteryPortList.get(i));
-                LogEngine.instance.write("batteryDischarge = " + percentage);
+                boolean isOn = (boolean) offMethod.invoke(weatherRadarPorts.get(i));
+                LogEngine.instance.write("isOn = " + isOn);
 
-                PrimaryFlightDisplay.instance.percentage = percentage;
-                FlightRecorder.instance.insert("Body", "BatteryDischarge: " + percentage);
+                PrimaryFlightDisplay.instance.isWeatherRadarOn = isOn;
+                FlightRecorder.instance.insert("Body", "WeatherRadar (isOn): " + isOn);
 
                 LogEngine.instance.write("+");
-
             }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
-        LogEngine.instance.write("PrimaryFlightDisplay (batteryDischarge): " + PrimaryFlightDisplay.instance.percentage);
-        FlightRecorder.instance.insert("PrimaryFlightDisplay", "batteryDischarge:  " + PrimaryFlightDisplay.instance.percentage);
+        LogEngine.instance.write("PrimaryFlightDisplay (isWeatherRadarOn): " + PrimaryFlightDisplay.instance.isWeatherRadarOn);
+        FlightRecorder.instance.insert("PrimaryFlightDisplay", "isWeatherRadarOn: " + PrimaryFlightDisplay.instance.isWeatherRadarOn);
     }
 
-    //apu_oil_tank methods
-    public void setApuOilTankIncreaseLevel(int value)
-    {
-
-        LogEngine.instance.write("+ Body.receive(apuOilTankIncreaseLevel)");
-        FlightRecorder.instance.insert("Body","receive(apuOilTankIncreaseLevel)");
-
-        try {
-            for(int i=0; i<Configuration.instance.numberOfApuOilTank;i++)
-            {
-                Method onMethod = apuOilTankPortList.get(i).getClass().getDeclaredMethod("increase",int.class);
-                FlightRecorder.instance.insert("Body","receive(apuOilTankIncreaseLevel)");
-
-                int level = (int)onMethod.invoke(apuOilTankPortList.get(i),value);
-                LogEngine.instance.write("apuOilTankIncreaseLevel = " + level);
-
-                PrimaryFlightDisplay.instance.level = level;
-                FlightRecorder.instance.insert("Body", "apuOilTankIncreaseLevel: " + level);
-
-                LogEngine.instance.write("+");
-
-            }
-        }
-        catch (Exception e)
-        {
-            System.out.println(e.getMessage());
-        }
-
-        LogEngine.instance.write("PrimaryFlightDisplay (apuOilTankIncreaseLevel): " + PrimaryFlightDisplay.instance.level);
-        FlightRecorder.instance.insert("PrimaryFlightDisplay", "apuOilTankIncreaseLevel:  " + PrimaryFlightDisplay.instance.level);
+    @Subscribe
+    public void receive(WeatherRadarScan weatherRadarScan) {
+        FlightRecorder.instance.insert("Body", "receive(" + weatherRadarScan.toString() + ")");
     }
 
-    public void setApuOilTankDecreaseLevel(int value)
-    {
-
-        LogEngine.instance.write("+ Body.receive(apuOilTankDecreaseLevel)");
-        FlightRecorder.instance.insert("Body","receive(apuOilTankDecreaseLevel)");
-
-        try {
-            for(int i=0; i<Configuration.instance.numberOfApuOilTank;i++)
-            {
-                Method onMethod = apuOilTankPortList.get(i).getClass().getDeclaredMethod("decrease",int.class);
-                FlightRecorder.instance.insert("Body","receive(apuOilTankDecreaseLevel)");
-
-                int level = (int)onMethod.invoke(apuOilTankPortList.get(i),value);
-                LogEngine.instance.write("apuOilTankDecreaseLevel = " + level);
-
-                PrimaryFlightDisplay.instance.level = level;
-                FlightRecorder.instance.insert("Body", "apuOilTankDecreaseLevel: " + level);
-
-                LogEngine.instance.write("+");
-
-            }
-        }
-        catch (Exception e)
-        {
-            System.out.println(e.getMessage());
-        }
-
-        LogEngine.instance.write("PrimaryFlightDisplay (apuOilTankDecreaseLevel): " + PrimaryFlightDisplay.instance.level);
-        FlightRecorder.instance.insert("PrimaryFlightDisplay", "apuOilTankDecreaseLevel:  " + PrimaryFlightDisplay.instance.level);
-    }
-
+    // ----------------------------------------------------------------------------------------------------------------
 }

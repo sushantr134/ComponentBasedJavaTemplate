@@ -1,91 +1,79 @@
 package base;
 
+import com.google.common.eventbus.EventBus;
+import event.Subscriber;
+import event.weather_radar.WeatherRadarOff;
+import event.weather_radar.WeatherRadarOn;
 import section.Body;
 import section.Wing;
 
-public class Airplane {
+public class Airplane implements IAirplane {
+    private EventBus eventBus;
     private Body body;
     private Wing leftWing;
     private Wing rightWing;
 
-    public Body getBody() {
-        return body;
+    public Airplane() {
+        eventBus = new EventBus("EB-A380");
     }
 
-    public Wing getLeftWing() {
-        return leftWing;
-    }
-
-    public Wing getRightWing() {
-        return rightWing;
+    public void addSubscriber(Subscriber subscriber) {
+        eventBus.register(subscriber);
     }
 
     public void build() {
         body = new Body();
+        addSubscriber(body);
+
         leftWing = new Wing();
+        addSubscriber(leftWing);
+
         rightWing = new Wing();
+        addSubscriber(rightWing);
     }
 
     public void startup() {
-        //battery
-        body.setBatteryCharge();
-
-        //apu_oil_tank
-        body.setApuOilTankIncreaseLevel(100);
+        // weather_radar
+        eventBus.post(new WeatherRadarOn());
     }
 
     public void taxi() {
         // weather_radar
-
+        eventBus.post(new WeatherRadarOn());
     }
 
     public void takeoff() {
         // weather_radar
-//        body.weatherRadarOn();
-//        body.weatherRadarScan("sky");
+        eventBus.post(new WeatherRadarOn());
     }
 
     public void climbing() {
         // weather_radar
-//        body.weatherRadarOn();
-//        body.weatherRadarScan("sky");
-    }
-
-    public void cruise() {
-        // weather_radar
-//        body.weatherRadarOn();
-//        body.weatherRadarScan("cloud");
+        eventBus.post(new WeatherRadarOn());
     }
 
     public void rightTurn() {
         // weather_radar
-//        body.weatherRadarOn();
-//        body.weatherRadarScan("sky");
+        eventBus.post(new WeatherRadarOn());
     }
 
     public void leftTurn() {
         // weather_radar
-//        body.weatherRadarOn();
-//        body.weatherRadarScan("sky");
+        eventBus.post(new WeatherRadarOn());
     }
 
     public void descent() {
         // weather_radar
-//        body.weatherRadarOn();
-//        body.weatherRadarScan("sky");
+        eventBus.post(new WeatherRadarOn());
     }
 
     public void landing() {
         // weather_radar
-//        body.weatherRadarOn();
-//        body.weatherRadarScan("sky");
+        eventBus.post(new WeatherRadarOn());
     }
 
     public void shutdown() {
-        //battery
-        body.setBatteryDischarge();
-
-        //apu_oil_tank
-        body.setApuOilTankDecreaseLevel(0);
+        // weather_radar
+        eventBus.post(new WeatherRadarOff());
     }
 }
