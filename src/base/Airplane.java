@@ -37,63 +37,49 @@ public class Airplane implements IAirplane {
     public void startup() {
         // battery
         eventBus.post(new BatteryCharge());
-        //apu_oil_tank
-        eventBus.post(new APUOilTankIncreaseLevel(100));
+
     }
 
     public void taxi() {
         // battery
-        eventBus.post(new BatteryCharge());
-        //apu_oil_tank
-        eventBus.post(new APUOilTankIncreaseLevel(100));
+        eventBus.post(new BatteryDischarge());
+
     }
 
     public void takeoff() {
         // battery
-        eventBus.post(new BatteryCharge());
-        //apu_oil_tank
-        eventBus.post(new APUOilTankDecreaseLevel(1));
+        eventBus.post(new BatteryDischarge());
+
     }
 
     public void climbing() {
         // battery
-        eventBus.post(new BatteryCharge());
-        //apu_oil_tank
-        eventBus.post(new APUOilTankDecreaseLevel(10));
+        eventBus.post(new BatteryDischarge());
+
     }
 
     public void rightTurn() {
         // battery
-        eventBus.post(new BatteryCharge());
-        //apu_oil_tank
-        eventBus.post(new APUOilTankDecreaseLevel(10));;
+        eventBus.post(new BatteryDischarge());
     }
 
     public void leftTurn() {
         // battery
-        eventBus.post(new BatteryCharge());
-        //apu_oil_tank
-        eventBus.post(new APUOilTankDecreaseLevel(20));
+        eventBus.post(new BatteryDischarge());
     }
 
     public void descent() {
         // battery
-        eventBus.post(new BatteryCharge());
-        //apu_oil_tank
-        eventBus.post(new APUOilTankDecreaseLevel(10));
+        eventBus.post(new BatteryDischarge());
     }
 
     public void landing() {
         // battery
-        eventBus.post(new BatteryCharge());
-        //apu_oil_tank
-        eventBus.post(new APUOilTankDecreaseLevel(10));
+        eventBus.post(new BatteryDischarge());
     }
 
     public void shutdown() {
         // battery
         eventBus.post(new BatteryDischarge());
-        //apu_oil_tank
-        eventBus.post(new APUOilTankDecreaseLevel(10));
     }
 }
