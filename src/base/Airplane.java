@@ -43,49 +43,49 @@ public class Airplane implements IAirplane {
 
     public void taxi() {
         // battery
-        eventBus.post(new BatteryCharge());
+        eventBus.post(new BatteryDischarge());
         //apu_oil_tank
-        eventBus.post(new APUOilTankIncreaseLevel(100));
+        eventBus.post(new APUOilTankDecreaseLevel(10));
     }
 
     public void takeoff() {
         // battery
-        eventBus.post(new BatteryCharge());
+        eventBus.post(new BatteryDischarge());
         //apu_oil_tank
-        eventBus.post(new APUOilTankDecreaseLevel(1));
+        eventBus.post(new APUOilTankDecreaseLevel(10));
     }
 
     public void climbing() {
         // battery
-        eventBus.post(new BatteryCharge());
+        eventBus.post(new BatteryDischarge());
         //apu_oil_tank
         eventBus.post(new APUOilTankDecreaseLevel(10));
     }
 
     public void rightTurn() {
         // battery
-        eventBus.post(new BatteryCharge());
+        eventBus.post(new BatteryDischarge());
         //apu_oil_tank
         eventBus.post(new APUOilTankDecreaseLevel(10));;
     }
 
     public void leftTurn() {
         // battery
-        eventBus.post(new BatteryCharge());
+        eventBus.post(new BatteryDischarge());
         //apu_oil_tank
-        eventBus.post(new APUOilTankDecreaseLevel(20));
+        eventBus.post(new APUOilTankDecreaseLevel(10));
     }
 
     public void descent() {
         // battery
-        eventBus.post(new BatteryCharge());
+        eventBus.post(new BatteryDischarge());
         //apu_oil_tank
         eventBus.post(new APUOilTankDecreaseLevel(10));
     }
 
     public void landing() {
         // battery
-        eventBus.post(new BatteryCharge());
+        eventBus.post(new BatteryDischarge());
         //apu_oil_tank
         eventBus.post(new APUOilTankDecreaseLevel(10));
     }
