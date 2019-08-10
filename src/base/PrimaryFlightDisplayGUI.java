@@ -20,14 +20,10 @@ import recorder.FlightRecorder;
 import java.util.ArrayList;
 
 public class PrimaryFlightDisplayGUI extends Application {
-    private ComboBox<String> batteryComboBox;
     private ComboBox<String> apuOilTankComboBox;
     private TableView tableView;
     private ArrayList<PrimaryFlightDisplayEntry> dataList;
     private ObservableList data;
-
-    //battery
-    private PrimaryFlightDisplayEntry batteryEntry;
 
     //apu_oil_tank
     private PrimaryFlightDisplayEntry apuOilTankEntry;
@@ -181,25 +177,15 @@ public class PrimaryFlightDisplayGUI extends Application {
 
         // --- insert section: begin
 
-        //battery
-        Label batteryStatusLabel = new Label("BatteryStatus : ");
-        gridPane.add(batteryStatusLabel, 6, 0);
-
-        batteryComboBox = new ComboBox<>();
-        batteryComboBox.getItems().addAll("0", "50","100");
-        batteryComboBox.setValue("0");
-        batteryComboBox.setEditable(false);
-        gridPane.add(batteryComboBox, 7, 0);
-
         //apu_oil_tank
-        Label apuOilTankStatusLabel = new Label("APUOilTankStatus : ");
-        gridPane.add(apuOilTankStatusLabel, 9, 0);
+        Label apuOilTankStatusLabel = new Label("APUOilTank : ");
+        gridPane.add(apuOilTankStatusLabel, 6, 0);
 
         apuOilTankComboBox = new ComboBox<>();
         apuOilTankComboBox.getItems().addAll("0", "50","100");
         apuOilTankComboBox.setValue("0");
         apuOilTankComboBox.setEditable(false);
-        gridPane.add(apuOilTankComboBox, 10, 0);
+        gridPane.add(apuOilTankComboBox, 7, 0);
 
         return gridPane;
     }
@@ -221,12 +207,6 @@ public class PrimaryFlightDisplayGUI extends Application {
         tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
     }
 
-    public void setBatteryStatus(int percentage) {
-        batteryComboBox.getItems().addAll(Integer.toString(percentage));
-        batteryComboBox.setValue(Integer.toString(percentage));
-        batteryComboBox.setEditable(false);
-    }
-
     public void setApuOilTankStatus(int percentage) {
         apuOilTankComboBox.getItems().addAll(Integer.toString(percentage));
         apuOilTankComboBox.setValue(Integer.toString(percentage));
@@ -235,10 +215,6 @@ public class PrimaryFlightDisplayGUI extends Application {
 
     private void initData() {
         dataList = new ArrayList<>();
-
-        // battery
-         batteryEntry = new PrimaryFlightDisplayEntry("BatteryStatus", Integer.toString(PrimaryFlightDisplay.instance.percentage));
-         dataList.add(batteryEntry);
 
          //apu_oil_tank
         apuOilTankEntry =  new PrimaryFlightDisplayEntry("APUOilTankStatus",Integer.toString(PrimaryFlightDisplay.instance.level));
@@ -253,11 +229,6 @@ public class PrimaryFlightDisplayGUI extends Application {
     }
 
     public void update() {
-        //battery
-        batteryEntry.setValue(Integer.toString(PrimaryFlightDisplay.instance.percentage));
-        setBatteryStatus(PrimaryFlightDisplay.instance.percentage);
-        tableView.refresh();
-
         //apu_oil_tank
         apuOilTankEntry.setValue(Integer.toString(PrimaryFlightDisplay.instance.level));
         setApuOilTankStatus(PrimaryFlightDisplay.instance.level);
