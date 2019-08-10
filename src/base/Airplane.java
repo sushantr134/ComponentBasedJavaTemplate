@@ -45,7 +45,7 @@ public class Airplane implements IAirplane {
         // battery
         eventBus.post(new BatteryCharge());
         //apu_oil_tank
-        eventBus.post(new APUOilTankIncreaseLevel(100));
+        eventBus.post(new APUOilTankDecreaseLevel(1));
     }
 
     public void takeoff() {
