@@ -2,7 +2,6 @@ package test;
 
 import base.PrimaryFlightDisplay;
 import factory.ApuOilTankFactory;
-import factory.BatteryFactory;
 import logging.LogEngine;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -135,7 +134,7 @@ class TestAPUOilTank {
 
     @Test
     public void leftTurn() {
-        componentPort = BatteryFactory.build();
+        componentPort = ApuOilTankFactory.build();
         try {
             Method onMethod = componentPort.getClass().getDeclaredMethod("decrease",int.class);
             int level = (int) onMethod.invoke(componentPort,10);

@@ -35,36 +35,26 @@ public class Airplane implements IAirplane {
     }
 
     public void startup() {
-        // battery
-        eventBus.post(new BatteryCharge());
         //apu_oil_tank
         eventBus.post(new APUOilTankIncreaseLevel(100));
     }
 
     public void taxi() {
-        // battery
-        eventBus.post(new BatteryCharge());
         //apu_oil_tank
         eventBus.post(new APUOilTankDecreaseLevel(1));
     }
 
     public void takeoff() {
-        // battery
-        eventBus.post(new BatteryCharge());
         //apu_oil_tank
         eventBus.post(new APUOilTankDecreaseLevel(1));
     }
 
     public void climbing() {
-        // battery
-        eventBus.post(new BatteryCharge());
         //apu_oil_tank
         eventBus.post(new APUOilTankDecreaseLevel(10));
     }
 
     public void rightTurn() {
-        // battery
-        eventBus.post(new BatteryCharge());
         //apu_oil_tank
         eventBus.post(new APUOilTankDecreaseLevel(10));;
     }
@@ -77,22 +67,16 @@ public class Airplane implements IAirplane {
     }
 
     public void descent() {
-        // battery
-        eventBus.post(new BatteryCharge());
         //apu_oil_tank
         eventBus.post(new APUOilTankDecreaseLevel(10));
     }
 
     public void landing() {
-        // battery
-        eventBus.post(new BatteryCharge());
         //apu_oil_tank
         eventBus.post(new APUOilTankDecreaseLevel(10));
     }
 
     public void shutdown() {
-        // battery
-        eventBus.post(new BatteryDischarge());
         //apu_oil_tank
         eventBus.post(new APUOilTankDecreaseLevel(10));
     }

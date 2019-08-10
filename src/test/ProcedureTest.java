@@ -31,8 +31,6 @@ public class ProcedureTest {
     public void startUpTest() {
         cockpit.startup();
 
-        // battery
-        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
         //apu_oil_tank
         assertNotEquals(0,PrimaryFlightDisplay.instance.level);
     }
@@ -42,8 +40,6 @@ public class ProcedureTest {
     public void taxiTest() {
         cockpit.taxi();
 
-        // battery
-        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
         //apu_oil_tank
         assertNotEquals(0,PrimaryFlightDisplay.instance.level);;
     }
@@ -52,8 +48,6 @@ public class ProcedureTest {
     @Order(3)
     public void takeOffTest() {
         cockpit.takeoff();
-        // battery
-        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
         //apu_oil_tank
         assertNotEquals(0,PrimaryFlightDisplay.instance.level);
     }
@@ -62,8 +56,7 @@ public class ProcedureTest {
     @Order(4)
     public void climbingTest() {
         cockpit.climbing();
-        // battery
-        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
+
         //apu_oil_tank
         assertNotEquals(0,PrimaryFlightDisplay.instance.level);
     }
@@ -72,8 +65,7 @@ public class ProcedureTest {
     @Order(5)
     public void rightTurnTest() {
         cockpit.rightTurn();
-        // battery
-        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
+
         //apu_oil_tank
         assertNotEquals(0,PrimaryFlightDisplay.instance.level);
     }
@@ -82,8 +74,7 @@ public class ProcedureTest {
     @Order(6)
     public void leftTurnTest() {
         cockpit.leftTurn();
-        // battery
-        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
+
         //apu_oil_tank
         assertNotEquals(0,PrimaryFlightDisplay.instance.level);
     }
@@ -92,8 +83,7 @@ public class ProcedureTest {
     @Order(7)
     public void descentTest() {
         cockpit.descent();
-        // battery
-        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
+
         //apu_oil_tank
         assertNotEquals(0,PrimaryFlightDisplay.instance.level);
     }
@@ -102,8 +92,7 @@ public class ProcedureTest {
     @Order(8)
     public void landingTest() {
         cockpit.landing();
-        // battery
-        assertNotEquals(0,PrimaryFlightDisplay.instance.percentage);
+
         //apu_oil_tank
         assertNotEquals(0,PrimaryFlightDisplay.instance.level);
     }
@@ -112,8 +101,7 @@ public class ProcedureTest {
     @Order(9)
     public void shutdownTest() {
         cockpit.shutdown();
-        // battery
-        assertNotEquals(1,PrimaryFlightDisplay.instance.percentage);
+
         //apu_oil_tank
         assertNotEquals(100,PrimaryFlightDisplay.instance.level);
     }
